@@ -8,7 +8,8 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy:hardhat": "hardhat run ./scripts/DeployWithHardhard.ts --network sepolia",
-    "deploy:viem": "ts-node --files ./scripts/DeployWithViem.ts"
+    "deploy:viem": "ts-node --files ./scripts/DeployWithViem.ts",
+    "contract:cast-vote": "ts-node --files ./scripts/CastVote.ts"
   },
   "author": "",
   "license": "ISC",
