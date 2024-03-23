@@ -1,10 +1,23 @@
 # Ballot Project
 
-Before execute any scripts be sure create a `.env` file and add your
+## Setup Project
 
+Install dependencies
+
+```bash
+npm run install
 ```
-PRIVATE_KEY = ''
-ALCHEMY_API_KEY=""
+
+Create a .env file and add your env variables
+
+```bash
+cp .env.example .env
+```
+
+Compile smart contract
+
+```bash
+npm run compile
 ```
 
 ## Deploy
