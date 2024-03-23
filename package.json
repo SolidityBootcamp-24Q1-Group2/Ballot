@@ -1,0 +1,22 @@
+{
+  "name": "lesson-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "hardhat init",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:hardhat": "hardhat run ./scripts/DeployWithHardhard.ts --network sepolia",
+    "deploy:viem": "ts-node --files ./scripts/DeployWithViem.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "hardhat": "^2.22.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
