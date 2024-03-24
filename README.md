@@ -41,3 +41,17 @@ See your contract deployed in:
 ```
 https://sepolia.etherscan.io/address/<CONTRACT_ADDRESS>
 ```
+
+Interact with te contract
+
+Cast vote:
+
+```bash
+npm run contract:cast-vote <CONTRACT_ADDRESS> <PROPOSAL_INDEX>
+```
+
+Give right to vote:
+
+```bash
+npm run contract:give-right-to-vote <CONTRACT_ADDRESS> <NEW_VOTER_ADDRESS>
+```
