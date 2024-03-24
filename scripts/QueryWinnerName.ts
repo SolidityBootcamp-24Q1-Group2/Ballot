@@ -30,8 +30,6 @@ async function queryWinnerName() {
   ``;
 
   console.log(`Winning name: ${hexToString(winner_hex)}`);
-
-  // TODO
 }
 
 queryWinnerName().catch((error) => {
