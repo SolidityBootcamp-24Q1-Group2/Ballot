@@ -9,7 +9,8 @@
     "test": "hardhat test",
     "deploy:hardhat": "hardhat run ./scripts/DeployWithHardhard.ts --network sepolia",
     "deploy:viem": "ts-node --files ./scripts/DeployWithViem.ts",
-    "contract:cast-vote": "ts-node --files ./scripts/CastVote.ts"
+    "contract:cast-vote": "ts-node --files ./scripts/CastVote.ts",
+    "contract:give-right-to-vote": "ts-node --files ./scripts/GiveRightToVote.ts"
   },
   "author": "",
   "license": "ISC",
