@@ -1,6 +1,6 @@
 import { viem } from "hardhat";
 import { toHex } from "viem";
-const PROPOSALS = ['Proposal 1', 'Proposal 2', 'Proposal 3'];
+const PROPOSALS = ["Mclaren", "Ham", "Tacos", "Bochito"];
 
 async function main() {
   console.log("Proposals: ");
@@ -13,7 +13,7 @@ async function main() {
   ]);
 
   console.log("Ballot contract deployed at: ", ballotContract.address);
-  return
+  return;
 }
 
 main().catch((error) => {
