@@ -55,3 +55,21 @@ Give right to vote:
 ```bash
 npm run contract:give-right-to-vote <CONTRACT_ADDRESS> <NEW_VOTER_ADDRESS>
 ```
+
+Delegate vote:
+
+```bash
+npm run contract:delegate-vote <CONTRACT_ADDRESS> <DELEGATE_VOTE_ADDRESS>
+```
+
+Query winner name:
+
+```bash
+npm run contract:query-winner-name <CONTRACT_ADDRESS>
+```
+
+Query winning proposals
+
+```bash
+npm run contract:query-winning-proposals <CONTRACT_ADDRESS>
+```

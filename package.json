@@ -10,7 +10,10 @@
     "deploy:hardhat": "hardhat run ./scripts/DeployWithHardhard.ts --network sepolia",
     "deploy:viem": "ts-node --files ./scripts/DeployWithViem.ts",
     "contract:cast-vote": "ts-node --files ./scripts/CastVote.ts",
-    "contract:give-right-to-vote": "ts-node --files ./scripts/GiveRightToVote.ts"
+    "contract:give-right-to-vote": "ts-node --files ./scripts/GiveRightToVote.ts",
+    "contract:delegate-vote": "ts-node --files ./scripts/DelegateVote.ts",
+    "contract:query-winner-name": "ts-node --files ./scripts/QueryWinnerName.ts",
+    "contract:query-winning-proposal": "ts-node --files ./scripts/QueryWinningProposal.ts"
   },
   "author": "",
   "license": "ISC",
