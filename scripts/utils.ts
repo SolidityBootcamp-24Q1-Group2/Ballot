@@ -43,3 +43,11 @@ export const getAccountClient = () => {
 
   return walletClient;
 }
+export const getContractAddress = (parameter: string): `0x${string}` => {
+  const contractAddress = parameter as `0x${string}`;
+  if (!contractAddress) throw new Error("Contract address not provided");
+  if (!/^0x[a-fA-F0-9]{40}$/.test(contractAddress))
+    throw new Error("Invalid contract address");
+
+  return contractAddress;
+};
