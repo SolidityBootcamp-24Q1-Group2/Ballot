@@ -42,7 +42,7 @@ See your contract deployed in:
 https://sepolia.etherscan.io/address/<CONTRACT_ADDRESS>
 ```
 
-## Interact with te contract
+## Interact with the contract
 
 Cast vote:
 
