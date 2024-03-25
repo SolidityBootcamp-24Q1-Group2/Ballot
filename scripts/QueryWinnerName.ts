@@ -27,8 +27,6 @@ async function queryWinnerName() {
     functionName: "winnerName",
   })) as `0x${string}`;
 
-  ``;
-
   console.log(`Winning name: ${hexToString(winner_hex)}`);
 }
 
