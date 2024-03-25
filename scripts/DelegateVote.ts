@@ -35,7 +35,7 @@ async function main() {
 
   console.log("Transaction hash: ", hash);
   console.log("Waiting for confirmations");
-  const receipt = await publicClient.waitForTransactionReceipt({ hash });
+  // const receipt = await publicClient.waitForTransactionReceipt({ hash });
   console.log("Transaction confirmed");
   console.log("Your vote was delegated to: ", delegate_to_address);
 }

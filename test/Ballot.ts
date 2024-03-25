@@ -8,15 +8,15 @@ const PROPOSALS = ["Chocolate", "Vanilla", "Strawberry"];
 async function deployContract() {
   const publicClient = await viem.getPublicClient();
   const [account, otherAccount] = await viem.getWalletClients();
-  const propBites = PROPOSALS.map(
-    prop => toHex(prop, { size: 32 }));
-  const ballotContract = await viem.deployContract('Ballot', [propBites]);
+  const propBites = PROPOSALS.map((prop) => toHex(prop, { size: 32 }));
+  const ballotContract = await viem.deployContract("Ballot", [propBites]);
 
   return {
     ballotContract,
     account,
     otherAccount,
-    publicClient, 
+    publicClient,
+  };
 }
 
 describe("Ballot", async () => {
@@ -26,11 +26,13 @@ describe("Ballot", async () => {
       const proposals = await Promise.all([
         ballotContract.read.proposals([0n]),
         ballotContract.read.proposals([1n]),
-        ballotContract.read.proposals([2n])
+        ballotContract.read.proposals([2n]),
       ]);
 
-      const proposalNames = proposals.map(prop => prop[0].toString());
-      const expectedProposals = PROPOSALS.map(prop => toHex(prop, { size: 32 }));
+      const proposalNames = proposals.map((prop) => prop[0].toString());
+      const expectedProposals = PROPOSALS.map((prop) =>
+        toHex(prop, { size: 32 })
+      );
 
       expect(proposalNames).to.deep.equal(expectedProposals);
     });
@@ -40,10 +42,10 @@ describe("Ballot", async () => {
       const proposals = await Promise.all([
         ballotContract.read.proposals([0n]),
         ballotContract.read.proposals([1n]),
-        ballotContract.read.proposals([2n])
+        ballotContract.read.proposals([2n]),
       ]);
 
-      const proposalVotes = proposals.map(prop => prop[1].toString());
+      const proposalVotes = proposals.map((prop) => prop[1].toString());
 
       expect(proposalVotes).to.deep.equal(["0", "0", "0"]);
     });
@@ -58,7 +60,7 @@ describe("Ballot", async () => {
       const { ballotContract, account } = await loadFixture(deployContract);
       const chairperson = await ballotContract.read.chairperson();
       const votingWeight = await ballotContract.read.voters([chairperson]);
-      
+
       console.log("votingWeight", votingWeight);
       expect(votingWeight[0]).to.equal(1n);
     });
