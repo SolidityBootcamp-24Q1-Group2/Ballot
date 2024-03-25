@@ -1,4 +1,4 @@
-import { getPublicClient, getAccountClient, getContractAddress } from "./utils";
+import { getPublicClient, getContractAddress } from "./utils";
 import { abi } from "../artifacts/contracts/Ballot.sol/Ballot.json";
 import { hexToString } from "viem";
 
